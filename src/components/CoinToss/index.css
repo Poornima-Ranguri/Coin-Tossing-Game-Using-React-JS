@@ -1,0 +1,64 @@
+.home {
+  background-image: linear-gradient(to left, #e2a139, #f9d423);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.heading {
+  color: #a35200;
+  font-family: 'Roboto';
+}
+
+.parag {
+  color: #334155;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+}
+
+.btn {
+  background-color: #e2a139;
+  color: #a35200;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+}
+
+@media (width: 576px), (max-width: 576px) {
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}
+
+@media (width: 768px), (min-width: 768px) {
+  .result-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}
+
+.paragraph {
+  color: #475569;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
