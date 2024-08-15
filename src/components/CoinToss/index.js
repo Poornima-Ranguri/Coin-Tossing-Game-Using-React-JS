@@ -14,24 +14,22 @@ class CoinToss extends Component {
   }
 
   onTossCoin = () => {
-    const {headsCount, tailsCount} = this.state
+    const {headsCount} = this.state
+    console.log(headsCount)
+
     const toss = Math.floor(Math.random() * 2)
-    let tossImage = ''
-    let latestHeadsCount = headsCount
-    let latestTailsCount = tailsCount
 
     if (toss === 0) {
-      tossImage = HEADS_IMG_URL
-      latestHeadsCount += 1
+      this.setState(prevState => ({
+        headsCount: prevState.headsCount + 1,
+        tossResultImage: HEADS_IMG_URL,
+      }))
     } else {
-      tossImage = TAILS_IMG_URL
-      latestTailsCount += 1
+      this.setState(prevState => ({
+        tailsCount: prevState.tailsCount + 1,
+        tossResultImage: TAILS_IMG_URL,
+      }))
     }
-    this.setState({
-      tossResultImage: tossImage,
-      headsCount: latestHeadsCount,
-      tailsCount: latestTailsCount,
-    })
   }
 
   render() {
